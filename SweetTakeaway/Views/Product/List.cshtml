@@ -1,0 +1,19 @@
+﻿@model ProductListViewModel
+
+<h1>@Model.CurrentCategory</h1>
+
+<div class="row align-content-center">
+    @foreach (var product in Model.Products)
+    {
+        <div class="col-sm-4 text-center">
+            <div class="card" style="height: 28rem; width: 20rem; margin: 10px 10px 10px 10px;">
+                <img class="card-img-top img-thumbnail" src="@product.ImageThumbnailUrl" style="height: 250px; width: 300px; margin: 10px 10px 10px 10px;" alt="Product Image"/>
+                <div class="card-body">
+                    <h4 class="card-title">@product.Name</h4>
+                    <p class="card-text" style="font-size: 10px">@product.ShortDescription</p>
+                    <h6 class="card-footer text-muted">@product.Price.ToString("C")</h6>
+                </div>
+            </div>
+        </div>
+    }
+</div>
