@@ -1,0 +1,16 @@
+﻿@model HomeViewModel
+
+<partial name="_Carousel" />
+
+<br />
+
+<h2>Currently on sale</h2>
+
+<br />
+
+<div class="row">
+    @foreach (Product product in Model.ProductOnSale)
+    { 
+        <partial name="_productCard" model="product" />
+    }
+</div>

@@ -41,6 +41,7 @@ namespace SweetTakeaway
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseBrowserLink();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();

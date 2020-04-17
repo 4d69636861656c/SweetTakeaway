@@ -1,10 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SweetTakeaway.Models;
 using SweetTakeaway.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace SweetTakeaway.Controllers
 {
@@ -29,6 +25,18 @@ namespace SweetTakeaway.Controllers
             productListViewModel.CurrentCategory = "Bestsellers";
 
             return View(productListViewModel);
+        }
+
+        public IActionResult Details(int productId)
+        {
+            Product product = _productRepository.GetProductById(productId);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return View(product);
         }
     }
 }
