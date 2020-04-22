@@ -11,7 +11,7 @@
                     <p class="btn btn-danger btn-block">@Model.Price.ToString("C")</p>
                 </div>
                 <div class="col">
-                    <a href="#" class="btn btn-success btn-block">
+                    <a class="btn btn-success btn-block" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-productId="@Model.ProductId">
                         <i class="fa fa-shopping-cart"></i> Add
                         <span class="badge badge-light"></span>
                     </a>

@@ -32,14 +32,12 @@
                     <li class="nav-item active">
                         <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Category" asp-action="AllCategories">Categories <span class="sr-only">(current)</span></a>
-                    </li>
+                    @await Component.InvokeAsync("CategoryMenu")
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Product" asp-action="List">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Cart</a>
+                        <a class="nav-link" asp-controller="ShoppingCart" asp-action="Index">Cart</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -55,10 +53,7 @@
                             </button>
                         </div>
                     </div>
-                    <a class="btn btn-success btn-sm ml-3" href="cart.html">
-                        <i class="fa fa-shopping-cart"></i> Cart
-                        <span class="badge badge-light">0</span>
-                    </a>
+                    @await Component.InvokeAsync("ShoppingCartSummary")
                 </form>
             </div>
         </div>
@@ -83,16 +78,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-3">
-                <div class="card bg-light mb-3">
-                    <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Categories</div>
-                    <ul class="list-group category_block">
-                        <li class="list-group-item"><a href="category.html">Cras justo odio</a></li>
-                        <li class="list-group-item"><a href="category.html">Dapibus ac facilisis in</a></li>
-                        <li class="list-group-item"><a href="category.html">Morbi leo risus</a></li>
-                        <li class="list-group-item"><a href="category.html">Porta ac consectetur ac</a></li>
-                        <li class="list-group-item"><a href="category.html">Vestibulum at eros</a></li>
-                    </ul>
-                </div>
+                @await Component.InvokeAsync("CategorySideMenu")
                 <div class="card bg-light mb-3">
                     <div class="card-header bg-success text-white text-uppercase">Featured article</div>
                     <div class="card-body">
