@@ -42,17 +42,18 @@
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Contact" asp-action="Index">Contact</a>
                     </li>
+                    <partial name="_LoginPartial" />
                 </ul>
 
                 <form class="form-inline my-2 my-lg-0">
-                    <div class="input-group input-group-sm">
+                    @*<div class="input-group input-group-sm">
                         <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
                         <div class="input-group-append">
                             <button type="button" class="btn btn-secondary btn-number">
                                 <i class="fa fa-search"></i>
                             </button>
                         </div>
-                    </div>
+                    </div>*@
                     @await Component.InvokeAsync("ShoppingCartSummary")
                 </form>
             </div>
@@ -95,6 +96,7 @@
                 @RenderBody()
             </div>
         </div>
+        @RenderSection("Scripts", required: false) 
     </div>
 
     <!-- Footer -->
