@@ -19,7 +19,7 @@
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">
                 <img src="~/images/candyshoplogo.png" width="30" height="30" class="d-inline-block align-top" alt="Brand Image">
                 Sweet Takeaway
             </a>
@@ -40,7 +40,7 @@
                         <a class="nav-link" asp-controller="ShoppingCart" asp-action="Index">Cart</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" asp-controller="Contact" asp-action="Index">Contact</a>
                     </li>
                 </ul>
 
@@ -102,7 +102,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-lg-4 col-xl-3">
-                    <h5>About</h5>
+                    <h5>About us</h5>
                     <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
                     <p class="mb-0">
                         Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
@@ -135,10 +135,10 @@
                     <h5>Contact</h5>
                     <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
                     <ul class="list-unstyled">
-                        <li><i class="fa fa-home mr-2"></i> My company</li>
-                        <li><i class="fa fa-envelope mr-2"></i> email@example.com</li>
-                        <li><i class="fa fa-phone mr-2"></i> + 33 12 14 15 16</li>
-                        <li><i class="fa fa-print mr-2"></i> + 33 12 14 15 16</li>
+                        <li><i class="fa fa-home mr-2"></i>Sweet Takeaway</li>
+                        <li><i class="fa fa-envelope mr-2"></i><email address="info@sweettakeaway.com" link-text="Email us"></email></li>
+                        <li><i class="fa fa-phone mr-2"></i>00 00 00 00 00</li>
+                        <li><i class="fa fa-print mr-2"></i>11 22 33 44 55</li>
                     </ul>
                 </div>
                 <div class="col-12 copyright mt-3">
